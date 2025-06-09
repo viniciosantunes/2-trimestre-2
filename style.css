@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Rakkas&display=swap');
+
+/* Variáveis */
+:root {
+    --primary-color: #026773;
+    --secondary-color: #3CA6A6;
+    --text-color: #024959;
+    --background-color: #F2E3D5;
+    --button-hover: #012E40;
+    --destaque-color: #8C4A2B;
+    --destaque-light: #A67C52;
+    --font-body: "Chocolate Classical Sans", serif;
+    --font-titulo: "Rakkas", serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+/* Corpo da página */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--destaque-color);
+    font-family: var(--font-titulo);
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--destaque-light);
+    padding-bottom: 10px;
+}
+
+h3 {
+    margin-top: 25px;
+    color: var(--primary-color);
+}
+
+p {
+    margin-top: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--background-color);
+    text-decoration: underline;
+}
+
+/* Seções principais */
+.conteudo {
+    background: white;
+    padding: 30px;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.conteudo:hover {
+    transform: translateY(-5px);
+}
+
+#transgenicos {
+    border-left: 5px solid var(--destaque-color);
+    background-color: rgba(140, 74, 43, 0.05);
+}
+
+/* Imagens */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Listas */
+ul {
+    list-style-type: square;
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Botões */
+.cta-button {
+    display: block;
+    width: 250px;
+    margin: 30px auto 0;
+    padding: 12px;
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-footer {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.cta-footer:hover {
+    color: var(--background-color);
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--background-color);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .conteudo {
+        width: 90%;
+        padding: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .conteudo {
+        width: 95%;
+        padding: 15px;
+    }
+}
